@@ -1,0 +1,239 @@
+@font-face {
+  font-family: 'wscn';
+  src:  url('../fonts/wscn.eot?l80tf4');
+  src:  url('../fonts/wscn.eot?l80tf4#iefix') format('embedded-opentype'),
+    url('../fonts/wscn.ttf?l80tf4') format('truetype'),
+    url('../fonts/wscn.woff?l80tf4') format('woff'),
+    url('../fonts/wscn.svg?l80tf4#wscn') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: #162200 !important;
+  zoom: reset;
+  font-size: 12px;
+}
+
+body {
+  background-repeat: repeat;
+  background-image: url("../images/green_stripe.svg");
+  color: #333;
+  text-align: center;
+  background-size: 5%;
+  font-size: 100%;
+  background-attachment: fixed;
+  font-family: 'Quicksand', sans-serif;
+}
+
+body /deep/ ::shadow [hidden],
+[hidden] {
+  display: none !important;
+}
+
+.wscn-logo {
+  background-color: transparent !important;
+  border: 0 !important;
+  opacity: 1 !important;
+  cursor: default !important;
+}
+
+.wscn-logo svg g * {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.parent_node {
+  position: fixed;
+  _position: absolute;
+  display: inline-block;
+  text-align: center;
+  z-index: 2;
+  line-height: .1em;
+}
+
+#parent_node0 {
+  pointer-events: none;
+}
+
+.current_node {
+  z-index: 3;
+}
+
+.node {
+  background-color: #fff; 
+  border: 1px solid #555;
+  color: #555;
+  font-weight: normal;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius:  5px;
+  text-align: center;
+  overflow: hidden;
+  padding: .3em;
+  line-height: .9;
+  display: inline-block;
+  cursor: pointer;
+}
+
+
+.node.center_node {
+  background: #555;
+  border: none;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+help-window {
+  font-size: 150%;
+  width: 30%;
+  position: fixed;
+  right: 7em;
+  top: 1em;
+  border: 1px solid #333;
+  overflow: hidden;
+}
+
+#contact-form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+}
+
+paper-dialog {
+  font-size: 100%;
+  font-family: 'Quicksand', sans-serif;
+  line-height: 1;
+  width: 50%;
+}
+
+
+@media only screen and (max-width : 768px) {
+  #contact-form {
+    justify-content: stretch;
+    align-items: stretch;
+  }
+
+  paper-dialog {
+    top:0;
+    width: 100%;
+    max-width: 100% !important;
+    margin: 0 !important;
+    max-height: 100% !important;
+    height: 100%;
+  }
+
+  paper-dialog div.dialog-body {
+    height: 80%;
+    overflow-y: scroll;
+    margin: 0 !important;
+  }
+
+  paper-dialog h2 {
+    height: 10%;
+    border-bottom: 1px solid #e7e7e7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 !important;
+  }
+  
+  paper-dialog div.buttons {
+    height: 10%;
+  }
+}
+
+@media screen and ( max-height: 480px ) and (orientation: landscape) {
+
+  paper-dialog div.dialog-body {
+    height: 70%;
+    font-size: 50% !important;
+    line-height: 1.5 !important;
+  }
+
+  paper-dialog h2 {
+    height: 15%;
+  }
+  
+  paper-dialog div.buttons {
+    height: 15%;
+  }
+}
+
+paper-dialog h2 {
+  font-size: 100% !important;
+  line-height: 1 !important;
+}
+
+paper-dialog div.buttons {
+  background-color: #f7f7f7;
+  border-top: 1px solid #e7e7e7;
+  padding: 0 !important;
+}
+
+paper-dialog .dialog-body {
+  text-align: left;
+}
+
+#mPageFade {
+
+/*  background: url(../images/wscn-logo-full.svg) no-repeat center center; */
+  background-color: rgb(140, 170, 70);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999998;
+}
+
+.parent_line {
+  position: fixed;
+  _position: absolute;
+  z-index: 1;
+  transform-origin: 0 50%;
+  -moz-transform-origin: 0 50%;
+  -webkit-transform-origin: 0 50%;
+  -o-transform-origin: 0 50%;
+  -ms-transform-origin: 0 50%;
+  padding: 0;
+}
+
+.right_line_handle,
+.left_line_handle {
+  background: transparent;
+  position: fixed;
+  top: 0;
+  border: 1px solid #AAA;
+  border-radius: 50%;
+  background: #eee;
+  margin: 0 0 0 -.1em;
+}
+
+#wscn {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.line_color {
+  float: right;
+}
+
+.title {
+  overflow: hidden;
+}
+

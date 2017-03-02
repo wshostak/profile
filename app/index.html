@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="google" value="notranslate">
+
+    <title>William Shostak - Computer Nerd</title>
+    <meta name="description" content="William Shostak - Computer Nerd">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png?v=2" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png?v=2" sizes="16x16">
+    <link rel="manifest" href="/manifest.json?v=2">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=2" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicon.ico?v=2">
+    <meta name="theme-color" content="#162200">
+
+    <!-- Add to homescreen for Chrome on Android. Fallback for manifest.json -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="William Shostak - Computer Nerd">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="William Shostak - Computer Nerd">
+
+    <link type="text/css" rel="stylesheet" media="all" href="css/layout.css" />
+    <link type="text/css" rel="stylesheet" media="all" href="css/glyph.css" />
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.js" charset="utf-8"></script>
+    <script type="text/javascript" src="javascripts/loadWebComponents.js" charset="utf-8"></script>
+    <script type="text/javascript" src="javascripts/base.js" charset="utf-8"></script>
+    <script type="text/javascript" src="javascripts/mGraph.js" charset="utf-8"></script>
+
+    <link rel="import" href="/src/my-app.html">
+  </head>
+
+  <body unresolved>
+    <my-app></my-app>
+    <form is="iron-form" id="contact-form" method="post" enctype="application/x-www-form-urlencoded" action="contactme">
+      <paper-dialog id="help-dialog" modal>
+        <h2>Help</h2>
+        <div class="dialog-body">
+          <p>
+            Almost all aspects of life the universe and everything can be mapped out using a network of nodes (concepts) and links (relationships). This page is built on that idea using a force directed graph, jQuery plug-in Library, that I built in 2010. All nodes in all graphs I have had the pleasure of using are the same size, but I found the true graphical representation of nodes not to be so. My goal was to build a force directed graph that would work with nodes of varying sizes.
+          </p>
+          <ul>
+            <li>
+              You can move all nodes by clicking or touching the page and dragging.
+            </li>
+            <li>
+              You may also click or touch individual nodes and drag them to lock to specific locations.
+            </li>
+            <li>
+              Mouse Wheel zooms in and out, also up / down arrow keys and of course pinch.
+            </li>
+            <li>
+              Double clicking or taping resets zoom and will also recenter graph.
+            </li>
+          </ul>
+        </div>
+        <div class="buttons">
+          <paper-button dialog-confirm autofocus>OK</paper-button>
+        </div>
+      </paper-dialog>
+      <paper-dialog id="contact-dialog" modal>
+        <h2>Contact</h2>
+        <div class="dialog-body">
+          <paper-input name="name" required auto-validate error-message="You have no name?" label="Full Name"></paper-input>
+          <paper-input name="email" required pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" auto-validate error-message="Does't look like a valid email, double-check." label="Email Address"></paper-input>
+          <paper-input name="phone" label="Phone Number"></paper-input>
+          <paper-textarea name="message" required error-message="I'm sure you have something to say." label="Message to William..."></paper-textarea>
+        </div>
+        <div class="buttons">
+          <paper-button dialog-dismiss>Cancel</paper-button>
+          <paper-button autofocus onclick="submitForm()">Send</paper-button>
+        </div>
+      </paper-dialog>
+    </form>
+  </body>
+</html>

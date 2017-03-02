@@ -1,0 +1,143 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<!-- shared styles for all views -->
+<dom-module id="shared-styles">
+  <template>
+    <style>
+      [class^="glyph-"],
+      [class*=" glyph-"] {
+        /* use !important to prevent issues with browser extensions that change fonts */
+        font-family: 'wscn' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        display: inline-block;
+      
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      .glyph-help:before {
+        content: "\f059";
+        font-size: 33%;
+        top: .02em;
+        right: .12em;
+        position: absolute;
+        color: #192f7d;
+        background-color: white;
+        border-radius: 50%;
+        padding: 0 .1em .02em;
+        border: white .02em solid;
+      }
+      .glyph-about:before {
+        content: "\e88f";
+      }
+      .glyph-experience:before {
+        content: "\e021";
+      }
+      .glyph-skills:before {
+        content: "\f121";
+      }
+      .glyph-contact:before {
+        content: "\e902";
+      }
+      .glyph-facebook:before {
+        color: #000;
+        content: "\e01e";
+        font-size: 90%;
+      }
+      .glyph-google:before {
+        color: #000;
+        content: "\e909";
+        font-size: 90%;
+      }
+      .glyph-aboutme:before {
+        color: #000;
+        content: "\e90a";
+        font-size: 90%;
+      }
+      .glyph-hypemachine:before {
+        color: #000;
+        content: "\e908";
+        font-size: 90%;
+      }
+      .glyph-cerego {
+        background-color: #6EB623;
+        border-radius: .1em;
+      }
+      .glyph-cerego:before {
+        color: #fff;
+        content: "\e903";
+      }
+      .glyph-cerego:after {
+        color: #ACFF0D;
+        content: "\e901";
+      }
+      .glyph-24stream:before {
+        color: #356EEC;
+        content: "\e905";
+      }
+      .glyph-iknow:before {
+        color: #F97607;
+        content: "\e906";
+      }
+      .glyph-moholynagy:before {
+        color: #B22817;
+        content: "\e907";
+      }
+      .glyph-musicxray {
+        background-color: #222;
+        border-radius: .1em;
+      }
+      .glyph-musicxray:before {
+        color: #0081b5;
+        content: "\e01c";
+        margin-right: -1em;
+        font-size: 60%;
+      }
+      .glyph-musicxray:after {
+        color: #aaa;
+        content: "\e01b";
+        font-size: 60%;
+      }
+      .glyph-housingjapan:before {
+        color: #2496A4;
+        content: "\e90b";
+      }
+      .glyph-mapmyride:before {
+        color: #000;
+        content: "\e900";
+        font-size: 90%;
+      }
+      .glyph-linkedin:before {
+        color: #000;
+        content: "\f08c";
+      }
+      .glyph-external:before {
+        color: #192f7d;
+        content: "\f08e";
+      }
+      .glyph-github:before {
+        color: #000;
+        content: "\f09b";
+      }
+      .glyph-email:before {
+        color: #000;
+        content: "\f0e0";
+      }
+   </style>
+  </template>
+</dom-module>
