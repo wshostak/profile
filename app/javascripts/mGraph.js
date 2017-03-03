@@ -1534,14 +1534,11 @@
 
   $.fn.mGraph.stopDrag = function (e) {
 
-console.log("stopDrag");
     var node = $(e.target);
         e_node = false;
 
     e.stopPropagation();
     if ((!$i.is_touch && event.which != 1) || node.is('video') || node.hasClass($o.no_drag_class) || $(node).closest('a')[0]) return true;
-console.log($(node));
-console.log($(node).closest('a')[0]);
 
     if (node.closest('.' + $o.node_class)[0]) node = node.closest('.' + $o.node_class);
     if (node.closest('.' + $o.parent_prefix + $o.line_class)[0]) node = node.closest('.' + $o.parent_prefix + $o.line_class);

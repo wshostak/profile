@@ -10,10 +10,10 @@
     "polymer": "Polymer/polymer#^1.7.1",
     "iron-elements": "PolymerElements/iron-elements#^1.0.10",
     "paper-elements": "PolymerElements/paper-elements#^1.0.7",
-    "background-gradient": "wshostak/background-gradient#^1.0",
-    "background-wave": "wshostak/background-wave#^1.0",
-    "help-button": "wshostak/help-button#^1.0",
-    "menu-nodes": "wshostak/menu-nodes#^1.0"
+    "background-gradient": "wshostak/background-gradient",
+    "background-wave": "wshostak/background-wave",
+    "help-button": "wshostak/help-button",
+    "menu-nodes": "wshostak/menu-nodes"
   },
   "devDependencies": {
     "web-component-tester": "^4.0.0"

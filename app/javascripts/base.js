@@ -89,44 +89,49 @@
         };
   
     if (!$('#mPageFade')[0]) $('<div>').attr('id', 'mPageFade').prependTo('body');
-  
-    setTimeout(function () {
-        
-      $('#mPageFade').fadeOut(1000, function () {
-  
-        addNodes("node0");
-      });
 
-      $.get("images/wscn-logo-full-em.svg", function(svg) {
-
-        var wscn = $('<div>').attr('id', 'wscn').appendTo('body');
-  
-        wscn.mGraph({
-          line_width: 1,
-          max_size: 2,
-          line_color: '#dddddd',
-          max_orbit: 1000,
-          center_offset: {x: 0, y: 0},
-          nodes: {},
-          start_near_center: false,
-          transition_speed: 300,
-          zoom: 100
-        });
+    function wait(){
+      if (!$('body').width()) {
+        setTimeout(wait,100);
+      } else {
+        $('#mPageFade').fadeOut(1000, function () {
     
-        $.fn.mGraph.addNode({
-          link: false,
-          text: "William Shostak - Computer Nerd",
-          custom_html: '<div>' + (new XMLSerializer().serializeToString(svg.documentElement)) + '</div>',
-          add_class: 'center_node wscn-logo',
-          link_to: 'none',
-          links_to_center: true,
-          start_near_center: true,
-          menu: "main",
-          type: "text"
+          addNodes("node0");
         });
-      });
-    }, 500);
   
+        $.get("images/wscn-logo-full-em.svg", function(svg) {
+  
+          var wscn = $('<div>').attr('id', 'wscn').appendTo('body');
+    
+          wscn.mGraph({
+            line_width: 1,
+            max_size: 2,
+            line_color: '#dddddd',
+            max_orbit: 1000,
+            center_offset: {x: 0, y: 0},
+            nodes: {},
+            start_near_center: false,
+            transition_speed: 300,
+            zoom: 100
+          });
+      
+          $.fn.mGraph.addNode({
+            link: false,
+            text: "William Shostak - Computer Nerd",
+            custom_html: '<div>' + (new XMLSerializer().serializeToString(svg.documentElement)) + '</div>',
+            add_class: 'center_node wscn-logo',
+            link_to: 'none',
+            links_to_center: true,
+            start_near_center: true,
+            menu: "main",
+            type: "text"
+          });
+        });
+      }
+    }
+
+    wait();
+
     addNodes = function (node_id) {
       
       if (check_if_loaded(node_id)) return false;
